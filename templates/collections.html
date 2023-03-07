@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{% block title %} Collections {% endblock title %}</h1>
+    {% for item in items %}
+        <div class="card">
+            <h3 class="title">{{ item[1] }}</h3>
+            <p>{{ item[3] }}</p>
+            <p>{{ item[4] }}</p>
+            <p class="greentext"> >t. {{ item[5] }}</p>
+            <form method="post">
+                <button type="submit" class="likes">
+                    <span class="material-symbols-outlined">favorite</span>
+                    {{ item[2] }}
+                </button>
+            </form>
+        </div>
+    {% endfor %}
+{% endblock content %}

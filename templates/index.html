@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+    <div class="two-cols">
+        <div class="left" style="width: 40%; display: flex; align-items: center; justify-content: center; flex-direction: column">
+            <h2>The latest technological feat is here</h2>
+            <p>
+                Unlock the power of knowledge with our digital book collection - a gateway to the ever-evolving world of computer science. From coding to AI and everything in between, discover a world of limitless possibilities and let your imagination take flight. Let's explore the future, one page at a time!
+            </p>
+            <div class="two-cols">
+                <a href="/collections" class="button cta left">
+                    Explore
+                    <span class="material-symbols-outlined">
+                        arrow_right_alt
+                    </span>
+                </a>
+                <a href="/contribute" class="button usual right">
+                    Engage
+                </a>
+            </div>
+        </div>
+        <div class="right" style="width: 40%; display: flex; align-items: center; justify-content: center; flex-direction: column">
+            <img src="/static/images/cool_book.png" 
+            alt=""
+            srcset=""
+            width="400"
+            height="400">
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{% block title %} Add new collection {% endblock %}</h1>
+
+<form method="post">
+    <p>
+        <label for="title">Title</label>
+        <input type="text" name="title" placeholder="Collection title">
+    </p>
+    <p>
+        <label for="books">Books in the collection</label>
+        <input type="text" name="books" placeholder="Books">
+    </p>
+    <textarea name="description" cols="60" rows="15" placeholder="description"></textarea>
+    <p>
+        <label for="alias">Your alias</label>
+        <input type="text" name="alias" placeholder="angry_femboy43">
+    </p>
+    <p>
+        <button class="button cta" type="submit">Submit</button>
+    </p>
+</form>
+
+{% endblock content %}
