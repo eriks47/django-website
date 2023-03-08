@@ -37,12 +37,13 @@ def contribute():
         books = request.form["books"]
         description = request.form["description"]
         alias = request.form["alias"]
+        links = request.form["links"]
 
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute("INSERT INTO collections (title, books, description, likes, made_by)"
-                    "VALUES (%s, %s, %s, %s, %s)",
-                    (title, books, description, "0", alias))
+        cur.execute("INSERT INTO collections (title, books, description, likes, made_by, links)"
+                    "VALUES (%s, %s, %s, %s, %s, %s)",
+                    (title, books, description, "0", alias, links))
         conn.commit()
         cur.close()
         conn.close()
